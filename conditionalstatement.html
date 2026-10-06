@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditional Statements</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px 0 10px;
+        }
+
+        .odiv {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .div1 {
+            height: 300px;
+            width: 350px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.30);
+            border-radius: 8px;
+            text-align: center;
+            margin: 10px;
+            padding: 15px;
+        }
+
+        .div1 h3 {
+            margin: 8px 0;
+            font-size: 20px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+
+        input {
+            height: 35px;
+            width: 300px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding-left: 10px;
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        button {
+            height: 35px;
+            width: 300px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 8px 0;
+            background-color: rgb(15, 43, 196);
+            color: white;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: rgb(10, 30, 150);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JAVASCRIPT CONDITIONAL STATEMENTS</h1>
+    <h2>IF CONDITION</h2>
+
+    <div class="odiv">
+        <div class="div1">
+            <h3>1. Positive Number</h3>
+            <hr>
+            <input type="text" id="positiveNum" placeholder="Enter Number">
+            <button onclick="checkPositive()">Check</button>
+            <input type="text" id="positiveResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>2. Discount</h3>
+            <hr>
+            <input type="text" id="discountAmount" placeholder="Enter Amount">
+            <button onclick="checkDiscount()">Check</button>
+            <input type="text" id="discountResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>3. Divisible by 5</h3>
+            <hr>
+            <input type="text" id="divisibleNum" placeholder="Enter Number">
+            <button onclick="checkDivisible()">Check</button>
+            <input type="text" id="divisibleResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>4. Bonus Calculation</h3>
+            <hr>
+            <input type="text" id="salary" placeholder="Enter Salary">
+            <button onclick="calculateBonus()">Calculate</button>
+            <input type="text" id="bonusResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>5. Three-Digit Number</h3>
+            <hr>
+            <input type="text" id="threeDigitNum" placeholder="Enter Number">
+            <button onclick="checkThreeDigit()">Check</button>
+            <input type="text" id="threeDigitResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>6. Special Number</h3>
+            <hr>
+            <input type="text" id="specialNum" placeholder="Enter Number">
+            <button onclick="checkSpecial()">Check</button>
+            <input type="text" id="specialResult" placeholder="Result" readonly>
+        </div>
+
+    </div>
+
+
+
+
+    <h2>IF...ELSE CONDITION</h2>
+
+    <div class="odiv">
+
+        <div class="div1">
+            <h3>1. Even or Odd</h3>
+            <hr>
+            <input type="text" id="evenOddNum" placeholder="Enter Number">
+            <button onclick="checkEvenOdd()">Check</button>
+            <input type="text" id="evenOddResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>2. Voting Eligibility</h3>
+            <hr>
+            <input type="text" id="votingAge" placeholder="Enter Age">
+            <button onclick="checkVoting()">Check</button>
+            <input type="text" id="votingResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>3. Pass or Fail</h3>
+            <hr>
+            <input type="text" id="marks" placeholder="Enter Marks">
+            <button onclick="checkPassFail()">Check</button>
+            <input type="text" id="passFailResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>4. Number Comparison</h3>
+            <hr>
+            <input type="text" id="firstNumber" placeholder="Enter First Number">
+            <input type="text" id="secondNumber" placeholder="Enter Second Number">
+            <button onclick="compareNumbers()">Compare</button>
+            <input type="text" id="comparisonResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>5. Login Validation</h3>
+            <hr>
+            <input type="text" id="username" placeholder="Enter Username">
+            <input type="text" id="password" placeholder="Enter Password">
+            <button onclick="loginValidation()">Login</button>
+            <input type="text" id="loginResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>6. Electricity Bill Check</h3>
+            <hr>
+            <input type="text" id="billUnits" placeholder="Enter Units">
+            <button onclick="electricityBill()">Calculate</button>
+            <input type="text" id="billResult" placeholder="Result" readonly>
+        </div>
+
+    </div>
+
+
+
+    <h2>IF...ELSE IF CONDITION</h2>
+
+    <div class="odiv">
+
+        <div class="div1">
+            <h3>1. Positive, Negative or Zero</h3>
+            <hr>
+            <input type="text" id="pnzNum" placeholder="Enter Number">
+            <button onclick="checkPNZ()">Check</button>
+            <input type="text" id="pnzResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>2. Age Category</h3>
+            <hr>
+            <input type="text" id="categoryAge" placeholder="Enter Age">
+            <button onclick="ageCategory()">Check</button>
+            <input type="text" id="ageCategoryResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>3. Find Grade</h3>
+            <hr>
+            <input type="text" id="gradeMarks" placeholder="Enter Marks">
+            <button onclick="findGrade()">Find Grade</button>
+            <input type="text" id="gradeResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>4. Check Temperature</h3>
+            <hr>
+            <input type="text" id="temperature" placeholder="Enter Temperature">
+            <button onclick="checkTemperature()">Check</button>
+            <input type="text" id="temperatureResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>5. Largest of Three Numbers</h3>
+            <hr>
+            <input type="text" id="largeA" placeholder="Enter A">
+            <input type="text" id="largeB" placeholder="Enter B">
+            <input type="text" id="largeC" placeholder="Enter C">
+            <button onclick="largestThree()">Find Largest</button>
+            <input type="text" id="largestResult" placeholder="Result" readonly>
+        </div>
+
+        <div class="div1">
+            <h3>6. Electricity Bill Calculation</h3>
+            <hr>
+            <input type="text" id="units" placeholder="Enter Units">
+            <button onclick="calculateElectricityBill()">Calculate</button>
+            <input type="text" id="electricityResult" placeholder="Result" readonly>
+        </div>
+
+    </div>
+
+
+    <script>
+        function checkPositive() {
+            let n = Number(document.getElementById("positiveNum").value);
+
+            if (n > 0) {
+                document.getElementById("positiveResult").value =
+                    "It is positive Number";
+            }
+        }
+
+        function checkDiscount() {
+            let amount = Number(document.getElementById("discountAmount").value);
+
+            if (amount > 1000) {
+                document.getElementById("discountResult").value =
+                    "You are eligible for discount";
+            }
+        }
+
+        function checkDivisible() {
+            let num = Number(document.getElementById("divisibleNum").value);
+
+            if (num % 5 === 0) {
+                document.getElementById("divisibleResult").value =
+                    "Number is divisible by 5";
+            }
+        }
+
+        function calculateBonus() {
+            let salary = Number(document.getElementById("salary").value);
+
+            if (salary > 50000) {
+                let bonus = salary * 10 / 100;
+
+                document.getElementById("bonusResult").value =
+                    "The bonus is ₹" + bonus;
+            }
+        }
+
+        function checkThreeDigit() {
+            let digit = Number(document.getElementById("threeDigitNum").value);
+
+            if (digit >= 100 && digit <= 999) {
+                document.getElementById("threeDigitResult").value =
+                    "Three digit Number";
+            }
+        }
+
+        function checkSpecial() {
+            let number = Number(document.getElementById("specialNum").value);
+
+            if (number > 100 && number % 5 === 0 && number % 10 === 5) {
+                document.getElementById("specialResult").value =
+                    "It is a Special number";
+            }
+        }
+
+
+
+        function checkEvenOdd() {
+            let num = Number(document.getElementById("evenOddNum").value);
+
+            if (num % 2 === 0) {
+                document.getElementById("evenOddResult").value =
+                    num + " It is Even number";
+            }
+            else {
+                document.getElementById("evenOddResult").value =
+                    num + " It is Odd number";
+            }
+        }
+
+        function checkVoting() {
+            let age = Number(document.getElementById("votingAge").value);
+
+            if (age > 18) {
+                document.getElementById("votingResult").value =
+                    "Eligible for vote";
+            }
+            else {
+                document.getElementById("votingResult").value =
+                    "Not Eligible for vote";
+            }
+        }
+
+        function checkPassFail() {
+            let marks = Number(document.getElementById("marks").value);
+
+            if (marks >= 40) {
+                document.getElementById("passFailResult").value =
+                    "Student is Pass";
+            }
+            else {
+                document.getElementById("passFailResult").value =
+                    "Student is Fail";
+            }
+        }
+
+        function compareNumbers() {
+            let fNumber = Number(document.getElementById("firstNumber").value);
+            let sNumber = Number(document.getElementById("secondNumber").value);
+
+            if (fNumber > sNumber) {
+                document.getElementById("comparisonResult").value =
+                    "First number is greater than Second Number";
+            }
+            else {
+                document.getElementById("comparisonResult").value =
+                    "Second Number is greater";
+            }
+        }
+
+        function loginValidation() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            let correctUsername = "admin";
+            let correctPassword = "1234";
+
+            if (username === correctUsername && password === correctPassword) {
+                document.getElementById("loginResult").value =
+                    "Login Successful";
+            }
+            else {
+                document.getElementById("loginResult").value =
+                    "Invalid Username or Password";
+            }
+        }
+
+        function electricityBill() {
+            let units = Number(document.getElementById("billUnits").value);
+            let bill;
+
+            if (units <= 100) {
+                bill = units * 5;
+
+                document.getElementById("billResult").value =
+                    "Total bill at ₹5 = " + bill;
+            }
+            else {
+                bill = units * 8;
+
+                document.getElementById("billResult").value =
+                    "Total bill at ₹8 = " + bill;
+            }
+        }
+
+        function checkPNZ() {
+            let num = Number(document.getElementById("pnzNum").value);
+
+            if (num > 0) {
+                document.getElementById("pnzResult").value = "Positive";
+            }
+            else if (num < 0) {
+                document.getElementById("pnzResult").value = "Negative";
+            }
+            else {
+                document.getElementById("pnzResult").value = "Zero";
+            }
+        }
+
+        function ageCategory() {
+            let age = Number(document.getElementById("categoryAge").value);
+
+            if (age < 13) {
+                document.getElementById("ageCategoryResult").value = "Child";
+            }
+            else if (age < 18) {
+                document.getElementById("ageCategoryResult").value = "Teenager";
+            }
+            else {
+                document.getElementById("ageCategoryResult").value = "Adult";
+            }
+        }
+
+        function findGrade() {
+            let marks = Number(document.getElementById("gradeMarks").value);
+
+            if (marks >= 90) {
+                document.getElementById("gradeResult").value = "Grade A";
+            }
+            else if (marks >= 75) {
+                document.getElementById("gradeResult").value = "Grade B";
+            }
+            else if (marks >= 50) {
+                document.getElementById("gradeResult").value = "Grade C";
+            }
+            else {
+                document.getElementById("gradeResult").value = "Fail";
+            }
+        }
+
+        function checkTemperature() {
+            let temp = Number(document.getElementById("temperature").value);
+
+            if (temp >= 40) {
+                document.getElementById("temperatureResult").value = "Very Hot";
+            }
+            else if (temp >= 30) {
+                document.getElementById("temperatureResult").value = "Hot";
+            }
+            else if (temp >= 20) {
+                document.getElementById("temperatureResult").value = "Normal";
+            }
+            else {
+                document.getElementById("temperatureResult").value = "Cold";
+            }
+        }
+
+        function largestThree() {
+            let a = Number(document.getElementById("largeA").value);
+            let b = Number(document.getElementById("largeB").value);
+            let c = Number(document.getElementById("largeC").value);
+
+            if (a > b && a > c) {
+                document.getElementById("largestResult").value =
+                    "A is largest";
+            }
+            else if (b > a && b > c) {
+                document.getElementById("largestResult").value =
+                    "B is largest";
+            }
+            else if (c > a && c > b) {
+                document.getElementById("largestResult").value =
+                    "C is largest";
+            }
+            else {
+                document.getElementById("largestResult").value =
+                    "Some numbers are equal";
+            }
+        }
+
+        function calculateElectricityBill() {
+            let units = Number(document.getElementById("units").value);
+            let bill;
+            if (units <= 100) {
+                bill = units * 2;
+            }
+            else if (units <= 200) {
+                bill = units * 3;
+            }
+            else if (units <= 300) {
+                bill = units * 5;
+            }
+            else {
+                bill = units * 7;
+            }
+            document.getElementById("electricityResult").value =
+                "Electricity Bill: ₹" + bill;
+        }
+
+    </script>
+
+</body>
+</html>
